@@ -264,4 +264,35 @@ if(strpos($message, "/botstats") === 0 and $userId == $config['adminID']){
   
     ]); 
 }
-?>
+?>////////////====[HELPER2]====////////////
+if(strpos($message, "/admin") === 0 and $userId2 == $config['adminID']){
+  bot('sendmessage',[
+      'chat_id'=>$chat_id,
+      'text'=>"<b>Hello Admin! Here are your commands:
+
+/mute - Mute a User until the Specified time
+    Ex:-    <code>/mute userID 10m - Mutes for 10 min
+       /mute userID 10d - Mutes for 10 days</code>
+
+/unmute - Unmute a Muted user
+    Ex:-    <code>/unmute userID - Unmutes the User</code>
+
+/ban - Permanently Ban a user
+    Ex:-    <code>/ban userID - Bans the User</code>    
+    
+/unban - Unban a Banned user
+    Ex:-    <code>/unban userID - Unbans the User</code>   
+    
+/mutelist - Sends the List of Currently Muted User
+
+/banlist - Sends the List of Currently Banned User
+
+/botstats - Returns the Bot's stats
+
+/userstats - Check the Checker Stats of a User
+    Ex:-    <code>/userstats userID - Returns the stats</code>   </b>",
+'parse_mode'=>'html',
+'reply_to_message_id'=> $message_id,
+  ]);
+
+}
