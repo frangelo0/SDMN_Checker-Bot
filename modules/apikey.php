@@ -34,7 +34,7 @@ if(strpos($message, "/apikey ") === 0 || strpos($message, "!apikey ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Wait for Result...</b>",
+        'text'=>"<b>si te cojo me das un besso...</b>",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id]);
 
